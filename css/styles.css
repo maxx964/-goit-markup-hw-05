@@ -163,6 +163,23 @@ img {
     color: var(--header-color-hover);
 }
 
+.underline {
+    position: relative;
+}
+
+.underline::after {
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 48px;
+    height: 4px;
+    background: #404BBF;
+    border-radius: 2px;
+    display: block;
+}
+
 
 .header-contact {
     padding-top: 24px;

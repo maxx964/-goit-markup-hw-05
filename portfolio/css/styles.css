@@ -138,6 +138,21 @@ img {
     color: var(--active-color-hover);
 }
 
+.underline {
+    position: relative;
+}
+
+.underline::after {
+    content: "";
+    width: 66px;
+    height: 4px;
+    background: #404BBF;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
 .header-contact:hover,
 .header-contact:focus {
     color: var(--active-color-hover);
@@ -174,8 +189,8 @@ img {
 
 
 .section-our-product {
-    /* padding-top: 96px;
-    padding-bottom: 120px; */
+    padding-top: 100px;
+    padding-bottom: 120px;
     /* ці падінги пребираємо їх бути не повинно але автоперевірка може без них не пропустити
      padding-left: 120px;
     padding-right: 120px; */
