@@ -262,27 +262,30 @@ img {
 }
 
 
-button {
-    height: 56px;
+/* button {
+     height: 56px;
     display: block;
     min-width: 170px;
     cursor: pointer;
     margin: auto;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    padding: 16px 32px;
-    /* В СТРОЧНИХ ЄЛЕМЕНТІВ НЕМАЄ ПАРАМЕТРІВ ВЕРХНІХ НИЖНІХ МАРДЖЕНІВ  якщо потрібно
+    padding: 16px 32px; */
+/* В СТРОЧНИХ ЄЛЕМЕНТІВ НЕМАЄ ПАРАМЕТРІВ ВЕРХНІХ НИЖНІХ МАРДЖЕНІВ  якщо потрібно
     задати їм висоти чи ширини робимо з них блочно-сточні задаємо display-inline:block чи
-    просто   display: block; */
+    просто   display: block; 
 
-    /* КУБИК!!!!!!!!! */
-    transition-property: baground-color;
+    КУБИК!!!!!!!!! */
+/* transition-property: baground-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
 .btn-hero {
-    min-width: 169px;
+    padding: 16px 32px;
+
+    height: 56px;
+    min-width: 170px;
     text-align: center;
     font-family: "Roboto", sans-serif;
     font-weight: 600;
@@ -291,8 +294,15 @@ button {
     letter-spacing: 0.04em;
     color: var(--bgr-color-icon);
     background-color: #4D5AE5;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
     border: none;
+    cursor: pointer;
     /* ТАКОЖ КНОПКИ НЕ УНАСЛІДУЮТЬ параметри від батьків тому ім задаємо це окремо */
+    /* КУБИК!!!!!!!!! */
+    transition-property: baground-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -703,7 +713,7 @@ button {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
-.icon-modal-close {
+.icon-modal-btn {
     display: flex;
     height: 24px;
     width: 24px;
@@ -715,5 +725,6 @@ button {
     margin-left: auto;
     background-color: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 
 }
