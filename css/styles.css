@@ -701,10 +701,19 @@ button {
     /* transition-property: opasity;
     transition-duration: 1000ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
-
 }
 
-
-/* .backdrop.is-hidden .modal {
-    opacity: 0;
-} */
+.icon-modal-close {
+    display: flex;
+    height: 24px;
+    width: 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin-top: 24px;
+    margin-right: 24px;
+    margin-left: auto;
+    background-color: #E7E9FC;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}

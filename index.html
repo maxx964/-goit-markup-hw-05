@@ -461,7 +461,12 @@
     <!-- /* модальне вікно можна зверстати к коді  біля кнопки */ -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal" data-modal>
-        <button data-modal-close type="button">close</button>
+        <p class="icon-modal-close">
+          <svg icon-close data-modal-close width="8" height="8">
+            <use href="./images/icons.svg#icon-modal-close"></use>
+          </svg>
+        </p>
+        <!-- <button data-modal-close type="button">close</button> -->
       </div>
     </div>
     <!-- Ставим перед закрывающим тегом body -->
