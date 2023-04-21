@@ -151,6 +151,10 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--secondory-font-color);
+    /* КУБИК!!!!!!!!! */
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link:hover,
@@ -266,11 +270,15 @@ button {
     margin: auto;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    padding: 16px 32px
-        /* В СТРОЧНИХ ЄЛЕМЕНТІВ НЕМАЄ ПАРАМЕТРІВ ВЕРХНІХ НИЖНІХ МАРДЖЕНІВ  якщо потрібно
+    padding: 16px 32px;
+    /* В СТРОЧНИХ ЄЛЕМЕНТІВ НЕМАЄ ПАРАМЕТРІВ ВЕРХНІХ НИЖНІХ МАРДЖЕНІВ  якщо потрібно
     задати їм висоти чи ширини робимо з них блочно-сточні задаємо display-inline:block чи
     просто   display: block; */
 
+    /* КУБИК!!!!!!!!! */
+    transition-property: baground-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-hero {
@@ -464,6 +472,10 @@ button {
     height: 40px;
     background-color: #4D5AE5;
     color: var(--main-light-color);
+    /* КУБИК!!!!!!!!! */
+    transition-property: background-color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -530,13 +542,22 @@ button {
     border: 1px solid #8E8F99;
     border-radius: 4px;
     color: var(--light-slate);
+    /* КУБИК!!!!!!!!! */
+    transition-property: backgroud-color, border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
+
 
 .customer-link:hover,
 .customer-link:focus {
     color: var(--btn-hero-color-hover);
     border: 1px solid var(--btn-hero-color-hover);
 }
+
+
+
 
 .icon-customers {
     fill: currentColor;
@@ -616,6 +637,10 @@ button {
     border-radius: 50%;
     background-color: var(--secondory-font-accent-color);
     color: var(--main-light-color);
+    /* КУБИК!!!!!!!!! */
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-link:hover,
@@ -626,3 +651,59 @@ button {
 .footer-icon {
     fill: var(--bgr-color-icon);
 }
+
+
+/* .backdrop ЦЕ ЗАТЕМНЕНЯ ЄКРАНУ ПРИ ПОЯВІ МОДАЛЬНОГО фіксуемо його за допомогою  position: fixed;\
+далі параметри фону і ширина з висотою  */
+.backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+
+    /* transition-property: visibility;
+    transition-duration: opasity 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+}
+
+.backdrop.is-hidden {
+    /* is-hidden візуально приховує нашу модалку */
+
+    /* opacity робить прозорим нашу модалку */
+    opacity: 0;
+
+
+    /* visibility: hidden; */
+
+    /* робить наш .backdrop пропускним для кліка мишкою бо по замовчуванні він перекриває доступ 
+    єкран  */
+    pointer-events: none;
+}
+
+/* .modal ЦЕ НАШЕ МОДАЛЬНЕ ВІКНО position: absolute; привязує його появу в області розмірів самого-backdrop
+далі параметри появизавжди позиціонує по верхному лівому куті
+тобто щоб на прямокутник був по середені за допомогою-transform: translate(-50%, -50%);
+нібити перекидуємо половину  */
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    min-width: 408px;
+    min-height: 576px;
+
+    background: #FCFCFC;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    /* transition-property: visibility;
+    transition-duration: opasity 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+}
+
+
+/* .backdrop.is-hidden .modal {
+    opacity: 0;
+} */
