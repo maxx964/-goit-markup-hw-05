@@ -663,9 +663,9 @@ button {
     min-height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
 
-    /* transition-property: visibility;
-    transition-duration: opasity 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -698,9 +698,10 @@ button {
     background: #FCFCFC;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    /* transition-property: visibility;
-    transition-duration: opasity 250ms;
+    /* transition-property: opasity;
+    transition-duration: 1000ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+
 }
 
 
