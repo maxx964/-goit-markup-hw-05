@@ -7,6 +7,7 @@
     --active-color-hover: #404bbf;
     --background-color-btn: #F4F4FD;
     --accent-color-cornflower: #e7e9fc;
+    --header-color-hover: #404bbf;
     --green-color: #31D0AA;
     --bgr-color-icon: #F4F4FD;
 }
@@ -142,6 +143,11 @@ img {
 .header-link:hover,
 .header-link:focus {
     color: var(--active-color-hover);
+}
+
+.header-contact:hover,
+.header-contact:focus {
+    color: var(--header-color-hover);
 }
 
 
